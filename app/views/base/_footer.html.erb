@@ -1,0 +1,10 @@
+<!-- Main Footer -->
+<footer class="main-footer">
+  <!-- To the right -->
+  <div class="float-right d-none d-sm-inline">
+    <%= I18n.t(:'app.desc') %>
+  </div>
+  <!-- Default to the left -->
+  <strong><%=I18n.t(:'app.copyright')%> &copy; <%=Time.zone.now.year%> <%=link_to I18n.t(:'app.name'),root_path%></strong>
+  <%=I18n.t(:'app.disclaimer')%>
+</footer>
