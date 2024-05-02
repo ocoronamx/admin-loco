@@ -1,17 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @breadcrumb = {
+    @breadcrumb = { title: 'Starter Page',
       list: [
-        { href: '/', text: 'Home', active: true }
-      ]
-    }
-  end
-  def test
-
-    @breadcrumb = {
-      list: [
-        { href: '/', text: 'Home' },
-        { href: '/home/test', text: 'Test', active: 'active' }
+        { href: root_path, text: I18n.t(:'home.title') }
       ]
     }
   end

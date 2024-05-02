@@ -35,8 +35,9 @@ en:
     desc: 'Administration Locomotive Template'
     copyright: 'MIT'
     disclaimer: 'Open Source.'
-    group: 'Loco pages'
+    group: 'Loco demos'
   home:
     title: 'Home'
-  test:
-    title: 'Test'
+  demo:
+    form: 'Form'
+    index: 'Index'

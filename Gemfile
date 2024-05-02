@@ -28,7 +28,7 @@ gem 'mimemagic', '~> 0.3.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-group :development, :test do
+group :development, :demo_form do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -42,7 +42,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-group :test do
+group :demo_form do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'

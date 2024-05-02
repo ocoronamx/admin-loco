@@ -2,7 +2,7 @@ development:
   adapter: async
 
 test:
-  adapter: test
+  adapter: demo_form
 
 production:
   adapter: redis

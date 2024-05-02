@@ -26,4 +26,4 @@ require('admin-lte');
 import "@fortawesome/fontawesome-free/js/all";
 
 export default {appTest: true}
-// import appTest from '../app/test'
+// import appTest from '../app/demo_form'

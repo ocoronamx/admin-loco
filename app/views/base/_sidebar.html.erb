@@ -24,7 +24,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                    <a href="#" class="nav-link <%= 'active' if request.parameters['controller'].eql?('demos') %>">
                         <i class="nav-icon fas fa-train"></i>
                         <p>
                           <%= I18n.t(:'app.group') %>
@@ -33,19 +33,21 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-<!--                            <a href="<%#= home_test_path %>" class="nav-link active">-->
-<!--                                <i class="far fa-circle nav-icon"></i>-->
-<!--                                <p><%#= I18n.t(:'test.title') %></p>-->
-<!--                            </a>-->
-                          <%= link_to home_test_path, class: "nav-link active" do %>
-                            <i class="fas fa-wrench nav-icon"></i>
-                            <p><%= I18n.t(:'test.title') %></p>
+                          <%= link_to demo_index_path, class: "nav-link #{'active' if active_link?(:demos, :index)}" do %>
+                            <i class="fas fa-list nav-icon"></i>
+                            <p><%= I18n.t(:'demo.index') %></p>
+                          <% end %>
+                        </li>
+                        <li class="nav-item">
+                          <%= link_to demo_form_path, class: "nav-link #{'active' if active_link?(:demos, :form)}" do %>
+                            <i class="fas fa-plus nav-icon"></i>
+                            <p><%= I18n.t(:'demo.form') %></p>
                           <% end %>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                  <%= link_to root_path, class: "nav-link" do %>
+                  <%= link_to root_path, class: "nav-link #{'active' if active_link?(:home, :index)}" do %>
                     <i class="nav-icon fas fa-home"></i>
                     <p>
                       <%= I18n.t(:'home.title') %> <!-- <span class="right badge badge-danger">New</span>-->
