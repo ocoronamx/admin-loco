@@ -1,2 +1,118 @@
-<h1>Demos#landing</h1>
-<p>Find me in app/views/demos/landing.html.erb</p>
+<!-- Navbar -->
+<nav class="navbar navbar-light navbar-white" style="margin-bottom: -5%">
+  <div class="container">
+    <%= link_to root_path, class: "brand-link" do %>
+      <%= image_tag("logo.png", class: "brand-image img-circle elevation-3", style: 'opacity: .8')%>
+    <% end %>
+    <span class="brand-text font-weight-normal" style="color: dimgrey"><b>Admin</b>Loco</span>
+    <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+      </ul>
+    </div>
+    <!-- Right navbar links -->
+    <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+      <li class="nav-item dropdown">
+        <a href="<%= home_path %>" type="button" class="btn nav-link btn-block" title="Home"><i class="fa fa-home"></i></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="<%= demo_login_path %>" type="button" class="btn nav-link btn-block" title="Sign in"><i class="fa fa-sign-in-alt"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- /.navbar -->
+
+<body class="hold-transition lockscreen">
+  <!-- Automatic element centering -->
+  <div class="lockscreen-wrapper">
+    <div class="text-center">
+      <p class="h1" style="font-size: 67px; color: dimgrey"><b>Admin</b>Loco</p>
+      <p class="h3" style="color: grey">Admin Locomotive Template is an administrative dashboard implementation with Ruby on Rails 6 </p>
+      <p class="mb-1">
+        <a href="<%= home_path %>">Go to Home Dashboard</a>
+      </p>
+    </div>
+  </div>
+</body>
+<hr>
+
+<section class="content">
+  <div class="container-fluid">
+    <!-- Small Box (Stat card) -->
+    <div class="row">
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-gradient-blue">
+          <div class="inner">
+            <h3>AdminLTE 3</h3>
+            <p>Best open source admin dashboard & control panel theme, built on top of Bootstrap.</p>
+          </div>
+          <div class="icon text-center">
+            <%= image_tag("logo_adminlte.png", class: "img-circle img-fluid", alt: 'user-avatar', size: "128x128") %>
+          </div>
+          <br>
+          <a href="https://adminlte.io/" class="small-box-footer" target="_blank">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-gradient-indigo">
+          <div class="inner">
+            <h3>Vue.js</h3>
+
+            <p>An approachable, performant and versatile framework for building web user interfaces.</p>
+          </div>
+          <div class="icon text-center">
+            <%= image_tag("logo_vue.png", class: "img-circle img-fluid", alt: 'user-avatar', size: "128x128") %>
+          </div>
+          <br>
+          <a href="https://vuejs.org/" class="small-box-footer" target="_blank">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-gradient-gray-dark">
+          <div class="inner">
+            <h3>Ruby 2.7.1</h3>
+
+            <p>A dynamic, open source programming language with a focus on simplicity and productivity.</p>
+          </div>
+          <div class="icon text-center">
+            <%= image_tag("logo_ruby.png", class: "img-circle img-fluid", alt: 'user-avatar', size: "128x128") %>
+          </div>
+          <br>
+          <a href="https://www.ruby-lang.org/" class="small-box-footer" target="_blank">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+      <div class="col-lg-3 col-6">
+        <!-- small card -->
+        <div class="small-box bg-gradient-gray-dark">
+          <div class="inner">
+            <h3>Rails 6.0.3</h3>
+
+            <p>A web-app framework that includes everything needed to create database-backed MVC web applications.</p>
+          </div>
+          <div class="icon text-center">
+            <%= image_tag("logo_rails.png", class: "img-circle img-fluid", alt: 'user-avatar', size: "132x132") %>
+          </div>
+          <br>
+          <a href="https://rubyonrails.org/" class="small-box-footer" target="_blank">
+            More info <i class="fas fa-arrow-circle-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- ./col -->
+    </div>
+    <!-- /.row -->
+  </div>
+</section>

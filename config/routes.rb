@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'home#index'
+  root 'demos#landing'
+  get 'home', to: 'home#index', as: 'home'
 
   # D e m o s
   get 'demos/index', to: 'demos#index', as: 'demo_index'

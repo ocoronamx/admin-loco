@@ -41,3 +41,5 @@ en:
   demo:
     form: 'Form'
     index: 'Index'
+    login: 'Login'
+    landing: 'Landing'

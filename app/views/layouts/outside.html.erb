@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Caching behavior on a per-page basis: Always fetch a page from server.
+         More: https://github.com/turbolinks/turbolinks#opting-out-of-caching -->
+    <meta name="turbolinks-cache-control" content="no-cache">
+    <title><%= I18n.t(:'app.name') %> <%= I18n.t(:'demo.landing') %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <%= yield %>
+
+</html>

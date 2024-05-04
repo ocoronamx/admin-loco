@@ -1,8 +1,9 @@
 class DemosController < ApplicationController
+  layout "outside", only: [:login, :landing]
   def index
     @breadcrumb = { title: 'Index demo',
       list: [
-        { href: root_path, text: I18n.t(:'home.title') },
+        { href: home_path, text: I18n.t(:'home.title') },
         { href: demo_index_path, text: I18n.t(:'demo.index') }
       ]
     }
@@ -17,7 +18,7 @@ class DemosController < ApplicationController
   def form
     @breadcrumb = { title: 'Form demo',
       list: [
-        { href: root_path, text: I18n.t(:'home.title') },
+        { href: home_path, text: I18n.t(:'home.title') },
         { href: demo_form_path, text: I18n.t(:'demo.form') }
       ]
     }
