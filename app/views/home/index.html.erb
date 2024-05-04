@@ -4,50 +4,134 @@
 
       <label id="flabel" for="finput"></label>
       <input type="text" id="finput" name="finput"><br><br>
-
       <hr>
-      <div style="color: black">
-        <h1>
-          TODO: Mejorar Home</a>
-        </h1>
-      </div>
-      <br>
 
-      <hr>
-      <div style="color: grey">
-        <h1>
-          TODO: Vista demo <a href="">show</a>
-        </h1>
-        <h1>
-          TODO: Vista demo <a href="">notices</a>
-        </h1>
-        <h1>
-          TODO: Implementar colorize
-        </h1>
-        <h1>
-          TODO: vista informativa basada en <a href="https://adminlte.io/themes/v3/pages/examples/e-commerce.html" target="_blank">e-commerce.html</a>
-        </h1>
-      </div>
-      <br>
+      <div class="row">
+        <div class="col-12">
+          <div class="card card-primary card-outline card-tabs">
+            <div class="card-header p-0 pt-1 border-bottom-0">
+              <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="custom-tabs-three-home-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">TODO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="custom-tabs-three-profile-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">PENDING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="custom-tabs-three-messages-tab" data-toggle="pill" href="#custom-tabs-three-messages" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">DONE</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content" id="custom-tabs-three-tabContent">
+                <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="custom-tabs-three-home-tab">
+                  <table class="table table-sm">
+                    <thead>
+                    <tr>
+                      <th style="width: 10px">#</th>
+                      <th>Task</th>
+                      <th>Progress</th>
+                      <th style="width: 40px">Label</th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
-      <hr>
-      <div style="color: lightgrey">
-        <h1>
-          TODO: Vista demo <a href="">landing</a>
-        </h1>
-        <h1>
-          TODO: Vista demo <a href="">login</a>
-        </h1>
-        <h1>
-          TODO: Vista demo <a href="https://adminlte.io/themes/v3/pages/tables/simple.html" target="_blank">index</a>
-        </h1>
-        <h1>
-          TODO: Vista demo <a href="https://adminlte.io/themes/v3/pages/forms/general.html" target="_blank">formulario</a>
-        </h1>
-        <h1>
-          DONE: Migrar demos a su propio controlador
-        </h1>
+                    <% @todos[:todo].each_with_index do |element, index| %>
+                      <tr>
+                        <td><%= index + 1 %>.</td>
+                        <td><%= element[:task] %></td>
+                        <td>
+                          <div class="progress progress-xs">
+                              <% case element[:progress]
+                                 when 0..29 %><% puts "0 to 29 bitch!" %><% bar_class = 'bg-red' %>
+                              <% when 30..79 %><% puts "30 to 79 bitch!" %><% bar_class = 'bg-yellow' %>
+                              <% when 80..100 %><% puts "80 to 100 bitch!" %><% bar_class = 'bg-green' %>
+                              <% else nil %>
+                              <% end %>
+                            <div class="progress-bar <%= bar_class %>" style="width: <%= element[:progress] %>%"></div>
+                          </div>
+                        </td>
+                        <td><span class="badge <%= bar_class %>"><%= element[:progress] %>%</span></td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="custom-tabs-three-profile-tab">
+                  <table class="table table-sm">
+                    <thead>
+                    <tr>
+                      <th style="width: 10px">#</th>
+                      <th>Task</th>
+                      <th>Progress</th>
+                      <th style="width: 40px">Label</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <% @todos[:pending].each_with_index do |element, index| %>
+                      <tr>
+                        <td><%= index +1 %>.</td>
+                        <td><%= element[:task] %></td>
+                        <td>
+                          <div class="progress progress-xs">
+                            <% case element[:progress]
+                               when 0..29 %><% puts "0 to 29 bitch!" %><% bar_class = 'bg-red' %>
+                              <% when 30..79 %><% puts "30 to 79 bitch!" %><% bar_class = 'bg-yellow' %>
+                              <% when 80..100 %><% puts "80 to 100 bitch!" %><% bar_class = 'bg-green' %>
+                            <% else nil %>
+                            <% end %>
+                            <div class="progress-bar <%= bar_class %>" style="width: <%= element[:progress] %>%"></div>
+                          </div>
+                        </td>
+                        <td><span class="badge <%= bar_class %>"><%= element[:progress] %>%</span></td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="custom-tabs-three-messages" role="tabpanel" aria-labelledby="custom-tabs-three-messages-tab">
+                  <table class="table table-sm">
+                    <thead>
+                    <tr>
+                      <th style="width: 10px">#</th>
+                      <th>Task</th>
+                      <th>Progress</th>
+                      <th style="width: 40px">Label</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <% @todos[:done].each_with_index do |element, index| %>
+                      <tr>
+                        <td><%= index + 1 %>.</td>
+                        <td><%= element[:task] %></td>
+                        <td>
+                          <div class="progress progress-xs">
+                            <% case element[:progress]
+                               when 0..29 %><% puts "0 to 29 bitch!" %><% bar_class = 'bg-red' %>
+                              <% when 30..79 %><% puts "30 to 79 bitch!" %><% bar_class = 'bg-yellow' %>
+                              <% when 80..100 %><% puts "80 to 100 bitch!" %><% bar_class = 'bg-green' %>
+                            <% else nil %>
+                            <% end %>
+                            <div class="progress-bar <%= bar_class %>" style="width: <%= element[:progress] %>%"></div>
+                          </div>
+                        </td>
+                        <td><span class="badge <%= bar_class %>"><%= element[:progress] %>%</span></td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+
       </div>
+
 
     </div>
   </div>
