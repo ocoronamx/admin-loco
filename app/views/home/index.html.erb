@@ -43,9 +43,9 @@
                         <td>
                           <div class="progress progress-xs">
                               <% case element[:progress]
-                                 when 0..29 %><% puts "0 to 29 bitch!" %><% bar_class = 'bg-red' %>
-                              <% when 30..79 %><% puts "30 to 79 bitch!" %><% bar_class = 'bg-yellow' %>
-                              <% when 80..100 %><% puts "80 to 100 bitch!" %><% bar_class = 'bg-green' %>
+                                 when 0..29 %><% bar_class = 'bg-red' %>
+                              <% when 30..79 %><% bar_class = 'bg-yellow' %>
+                              <% when 80..100 %><% bar_class = 'bg-green' %>
                               <% else nil %>
                               <% end %>
                             <div class="progress-bar <%= bar_class %>" style="width: <%= element[:progress] %>%"></div>
@@ -77,9 +77,9 @@
                         <td>
                           <div class="progress progress-xs">
                             <% case element[:progress]
-                               when 0..29 %><% puts "0 to 29 bitch!" %><% bar_class = 'bg-red' %>
-                              <% when 30..79 %><% puts "30 to 79 bitch!" %><% bar_class = 'bg-yellow' %>
-                              <% when 80..100 %><% puts "80 to 100 bitch!" %><% bar_class = 'bg-green' %>
+                               when 0..29 %><% bar_class = 'bg-red' %>
+                              <% when 30..79 %><% bar_class = 'bg-yellow' %>
+                              <% when 80..100 %><% bar_class = 'bg-green' %>
                             <% else nil %>
                             <% end %>
                             <div class="progress-bar <%= bar_class %>" style="width: <%= element[:progress] %>%"></div>
@@ -110,9 +110,9 @@
                         <td>
                           <div class="progress progress-xs">
                             <% case element[:progress]
-                               when 0..29 %><% puts "0 to 29 bitch!" %><% bar_class = 'bg-red' %>
-                              <% when 30..79 %><% puts "30 to 79 bitch!" %><% bar_class = 'bg-yellow' %>
-                              <% when 80..100 %><% puts "80 to 100 bitch!" %><% bar_class = 'bg-green' %>
+                               when 0..29 %><% bar_class = 'bg-red' %>
+                              <% when 30..79 %><% bar_class = 'bg-yellow' %>
+                              <% when 80..100 %><% bar_class = 'bg-green' %>
                             <% else nil %>
                             <% end %>
                             <div class="progress-bar <%= bar_class %>" style="width: <%= element[:progress] %>%"></div>
