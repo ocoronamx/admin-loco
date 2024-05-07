@@ -75,6 +75,7 @@ GEM
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     erubi (1.9.0)
+    execjs (2.9.1)
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -107,7 +108,7 @@ GEM
     puma (4.3.5)
       nio4r (~> 2.0)
     rack (2.2.3)
-    rack-proxy (0.6.5)
+    rack-proxy (0.7.7)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -156,6 +157,7 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    semantic_range (3.0.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -176,6 +178,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
+    vue_rails (1.0.0)
+      execjs
     web-console (4.0.3)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -185,10 +189,11 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (>= 3.0, < 4.0)
-    webpacker (4.2.2)
-      activesupport (>= 4.2)
+    webpacker (5.4.4)
+      activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -215,9 +220,10 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   turbolinks (~> 5)
   tzinfo-data
+  vue_rails
   web-console (>= 3.3.0)
   webdrivers
-  webpacker (~> 4.0)
+  webpacker (~> 5.4.4)
 
 RUBY VERSION
    ruby 2.7.1p83

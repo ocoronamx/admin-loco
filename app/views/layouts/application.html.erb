@@ -9,7 +9,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body data-scrollbar-auto-hide="n" class="hold-transition sidebar-mini layout-fixed">
@@ -49,4 +48,5 @@
         <%= render "base/control_sidebar" %>
       </div>
   </body>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-suppress-warning': true %>
 </html>
