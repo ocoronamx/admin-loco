@@ -104,3 +104,6 @@ _Pvt_Extensions
 # JetBrains Rider
 *.sln.iml
 .idea/*
+
+# Ignore application configuration
+/config/application.yml

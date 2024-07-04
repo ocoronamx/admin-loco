@@ -19,8 +19,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Fast mime detection by extension or content (freedesktop.org.xml shared-mime-info database)
 gem 'mimemagic', '~> 0.3.7'
-
-
+# Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem 'figaro', '~> 1.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
