@@ -1,8 +1,28 @@
 # Add configuration values here, as shown below.
-#   DATABASE   -   -   -   -   -   -   -   -
-db_adapter: sqlite3
-db_timeout: 5000
-db_pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#
+
+ruby_version: '2.7.1'
+
+db_adapter: "sqlite3"
+db_timeout: "5000"
+db_pool: <%= ENV.fetch("RAILS_MAX_THREADS") { "5" } %>
 db_name_dev: db/development.sqlite3
 db_name_prod: db/development.sqlite3
 db_name_test: db/development.sqlite3
+
+development: &development
+  secret_key_base: 'secret_key_base'
+  mina_domain: 'mina_domain'
+  mina_deploy_to: 'mina_deploy_to'
+  mina_repository: 'mina_repository'
+  mina_branch: 'mina_branch'
+  mina_user: 'mina_user'
+  mina_port: 'mina_port'
+  mina_app: 'mina_app'
+  mina_rvm_path: 'mina_rvm_path'
+
+test:
+  <<: *development
+
+production:
+  <<: *development

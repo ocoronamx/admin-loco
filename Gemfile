@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'mimemagic', '~> 0.3.7'
 # Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
 gem 'figaro', '~> 1.2'
+# Blazing fast application deployment tool.
+gem 'mina', '~> 1.2', '>= 1.2.5'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

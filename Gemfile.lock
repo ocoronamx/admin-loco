@@ -98,6 +98,8 @@ GEM
     mimemagic (0.3.10)
       nokogiri (~> 1)
       rake
+    mina (1.2.5)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
@@ -209,6 +211,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mimemagic (~> 0.3.7)
+  mina (~> 1.2, >= 1.2.5)
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.2)
   sass-rails (>= 6)
